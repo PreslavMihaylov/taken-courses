@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F33F538E1AD307A000904516 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F33F538D1AD307A000904516 /* main.m */; };
+		F33F53911AD307A000904516 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F33F53901AD307A000904516 /* AppDelegate.m */; };
+		F33F53941AD307A000904516 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33F53931AD307A000904516 /* ViewController.m */; };
+		F33F53971AD307A000904516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F33F53951AD307A000904516 /* Main.storyboard */; };
+		F33F53991AD307A000904516 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F33F53981AD307A000904516 /* Images.xcassets */; };
+		F33F539C1AD307A000904516 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33F539A1AD307A000904516 /* LaunchScreen.xib */; };
+		F33F53A81AD307A000904516 /* _5_Cinemas_ClassAssignmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F33F53A71AD307A000904516 /* _5_Cinemas_ClassAssignmentTests.m */; };
+		F33F53B91AD3115300904516 /* PKMCinemasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33F53B81AD3115300904516 /* PKMCinemasViewController.m */; };
+		F33F53BD1AD3142B00904516 /* PKMCinema.m in Sources */ = {isa = PBXBuildFile; fileRef = F33F53BC1AD3142B00904516 /* PKMCinema.m */; };
+		F3558E481AD6C00D00BB1FF0 /* PKMCinemaInfoRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = F3558E471AD6C00D00BB1FF0 /* PKMCinemaInfoRepository.m */; };
+		F369602D1AD4060F00FBC758 /* image0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F369602B1AD4060F00FBC758 /* image0.jpg */; };
+		F369602E1AD4060F00FBC758 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F369602C1AD4060F00FBC758 /* image1.jpg */; };
+		F36960301AD4067600FBC758 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F369602F1AD4067600FBC758 /* image2.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F33F53A21AD307A000904516 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F33F53801AD307A000904516 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F33F53871AD307A000904516;
+			remoteInfo = "05.Cinemas-ClassAssignment";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F33F53881AD307A000904516 /* 05.Cinemas-ClassAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "05.Cinemas-ClassAssignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F33F538C1AD307A000904516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F33F538D1AD307A000904516 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F33F538F1AD307A000904516 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F33F53901AD307A000904516 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F33F53921AD307A000904516 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		F33F53931AD307A000904516 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
+		F33F53961AD307A000904516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F33F53981AD307A000904516 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F33F539B1AD307A000904516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F33F53A11AD307A000904516 /* 05.Cinemas-ClassAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "05.Cinemas-ClassAssignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F33F53A61AD307A000904516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F33F53A71AD307A000904516 /* _5_Cinemas_ClassAssignmentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _5_Cinemas_ClassAssignmentTests.m; sourceTree = "<group>"; };
+		F33F53B71AD3115300904516 /* PKMCinemasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKMCinemasViewController.h; path = ../PKMCinemasViewController.h; sourceTree = "<group>"; };
+		F33F53B81AD3115300904516 /* PKMCinemasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKMCinemasViewController.m; path = ../PKMCinemasViewController.m; sourceTree = "<group>"; };
+		F33F53BB1AD3142B00904516 /* PKMCinema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKMCinema.h; sourceTree = "<group>"; };
+		F33F53BC1AD3142B00904516 /* PKMCinema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKMCinema.m; sourceTree = "<group>"; };
+		F3558E461AD6C00D00BB1FF0 /* PKMCinemaInfoRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKMCinemaInfoRepository.h; sourceTree = "<group>"; };
+		F3558E471AD6C00D00BB1FF0 /* PKMCinemaInfoRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKMCinemaInfoRepository.m; sourceTree = "<group>"; };
+		F369602B1AD4060F00FBC758 /* image0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image0.jpg; sourceTree = "<group>"; };
+		F369602C1AD4060F00FBC758 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		F369602F1AD4067600FBC758 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F33F53851AD307A000904516 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33F539E1AD307A000904516 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F33F537F1AD307A000904516 = {
+			isa = PBXGroup;
+			children = (
+				F33F538A1AD307A000904516 /* 05.Cinemas-ClassAssignment */,
+				F33F53A41AD307A000904516 /* 05.Cinemas-ClassAssignmentTests */,
+				F33F53891AD307A000904516 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F33F53891AD307A000904516 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F33F53881AD307A000904516 /* 05.Cinemas-ClassAssignment.app */,
+				F33F53A11AD307A000904516 /* 05.Cinemas-ClassAssignmentTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F33F538A1AD307A000904516 /* 05.Cinemas-ClassAssignment */ = {
+			isa = PBXGroup;
+			children = (
+				F3558E451AD6BFED00BB1FF0 /* Repository */,
+				F36960311AD410CF00FBC758 /* ViewControllers */,
+				F369602F1AD4067600FBC758 /* image2.jpg */,
+				F369602B1AD4060F00FBC758 /* image0.jpg */,
+				F369602C1AD4060F00FBC758 /* image1.jpg */,
+				F33F53BA1AD3141D00904516 /* Models */,
+				F33F538F1AD307A000904516 /* AppDelegate.h */,
+				F33F53901AD307A000904516 /* AppDelegate.m */,
+				F33F53951AD307A000904516 /* Main.storyboard */,
+				F33F53981AD307A000904516 /* Images.xcassets */,
+				F33F539A1AD307A000904516 /* LaunchScreen.xib */,
+				F33F538B1AD307A000904516 /* Supporting Files */,
+			);
+			path = "05.Cinemas-ClassAssignment";
+			sourceTree = "<group>";
+		};
+		F33F538B1AD307A000904516 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F33F538C1AD307A000904516 /* Info.plist */,
+				F33F538D1AD307A000904516 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F33F53A41AD307A000904516 /* 05.Cinemas-ClassAssignmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				F33F53A71AD307A000904516 /* _5_Cinemas_ClassAssignmentTests.m */,
+				F33F53A51AD307A000904516 /* Supporting Files */,
+			);
+			path = "05.Cinemas-ClassAssignmentTests";
+			sourceTree = "<group>";
+		};
+		F33F53A51AD307A000904516 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F33F53A61AD307A000904516 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F33F53BA1AD3141D00904516 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F33F53BB1AD3142B00904516 /* PKMCinema.h */,
+				F33F53BC1AD3142B00904516 /* PKMCinema.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3558E451AD6BFED00BB1FF0 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F3558E461AD6C00D00BB1FF0 /* PKMCinemaInfoRepository.h */,
+				F3558E471AD6C00D00BB1FF0 /* PKMCinemaInfoRepository.m */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F36960311AD410CF00FBC758 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F33F53B71AD3115300904516 /* PKMCinemasViewController.h */,
+				F33F53B81AD3115300904516 /* PKMCinemasViewController.m */,
+				F33F53921AD307A000904516 /* ViewController.h */,
+				F33F53931AD307A000904516 /* ViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F33F53871AD307A000904516 /* 05.Cinemas-ClassAssignment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F33F53AB1AD307A000904516 /* Build configuration list for PBXNativeTarget "05.Cinemas-ClassAssignment" */;
+			buildPhases = (
+				F33F53841AD307A000904516 /* Sources */,
+				F33F53851AD307A000904516 /* Frameworks */,
+				F33F53861AD307A000904516 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "05.Cinemas-ClassAssignment";
+			productName = "05.Cinemas-ClassAssignment";
+			productReference = F33F53881AD307A000904516 /* 05.Cinemas-ClassAssignment.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F33F53A01AD307A000904516 /* 05.Cinemas-ClassAssignmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F33F53AE1AD307A000904516 /* Build configuration list for PBXNativeTarget "05.Cinemas-ClassAssignmentTests" */;
+			buildPhases = (
+				F33F539D1AD307A000904516 /* Sources */,
+				F33F539E1AD307A000904516 /* Frameworks */,
+				F33F539F1AD307A000904516 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F33F53A31AD307A000904516 /* PBXTargetDependency */,
+			);
+			name = "05.Cinemas-ClassAssignmentTests";
+			productName = "05.Cinemas-ClassAssignmentTests";
+			productReference = F33F53A11AD307A000904516 /* 05.Cinemas-ClassAssignmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F33F53801AD307A000904516 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Mihaylov;
+				TargetAttributes = {
+					F33F53871AD307A000904516 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					F33F53A01AD307A000904516 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = F33F53871AD307A000904516;
+					};
+				};
+			};
+			buildConfigurationList = F33F53831AD307A000904516 /* Build configuration list for PBXProject "05.Cinemas-ClassAssignment" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F33F537F1AD307A000904516;
+			productRefGroup = F33F53891AD307A000904516 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F33F53871AD307A000904516 /* 05.Cinemas-ClassAssignment */,
+				F33F53A01AD307A000904516 /* 05.Cinemas-ClassAssignmentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F33F53861AD307A000904516 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F369602E1AD4060F00FBC758 /* image1.jpg in Resources */,
+				F369602D1AD4060F00FBC758 /* image0.jpg in Resources */,
+				F36960301AD4067600FBC758 /* image2.jpg in Resources */,
+				F33F53971AD307A000904516 /* Main.storyboard in Resources */,
+				F33F539C1AD307A000904516 /* LaunchScreen.xib in Resources */,
+				F33F53991AD307A000904516 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33F539F1AD307A000904516 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F33F53841AD307A000904516 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33F53BD1AD3142B00904516 /* PKMCinema.m in Sources */,
+				F3558E481AD6C00D00BB1FF0 /* PKMCinemaInfoRepository.m in Sources */,
+				F33F53B91AD3115300904516 /* PKMCinemasViewController.m in Sources */,
+				F33F53941AD307A000904516 /* ViewController.m in Sources */,
+				F33F53911AD307A000904516 /* AppDelegate.m in Sources */,
+				F33F538E1AD307A000904516 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33F539D1AD307A000904516 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33F53A81AD307A000904516 /* _5_Cinemas_ClassAssignmentTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F33F53A31AD307A000904516 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F33F53871AD307A000904516 /* 05.Cinemas-ClassAssignment */;
+			targetProxy = F33F53A21AD307A000904516 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F33F53951AD307A000904516 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F33F53961AD307A000904516 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F33F539A1AD307A000904516 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F33F539B1AD307A000904516 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F33F53A91AD307A000904516 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F33F53AA1AD307A000904516 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F33F53AC1AD307A000904516 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "05.Cinemas-ClassAssignment/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F33F53AD1AD307A000904516 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "05.Cinemas-ClassAssignment/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F33F53AF1AD307A000904516 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "05.Cinemas-ClassAssignmentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/05.Cinemas-ClassAssignment.app/05.Cinemas-ClassAssignment";
+			};
+			name = Debug;
+		};
+		F33F53B01AD307A000904516 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "05.Cinemas-ClassAssignmentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/05.Cinemas-ClassAssignment.app/05.Cinemas-ClassAssignment";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F33F53831AD307A000904516 /* Build configuration list for PBXProject "05.Cinemas-ClassAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33F53A91AD307A000904516 /* Debug */,
+				F33F53AA1AD307A000904516 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F33F53AB1AD307A000904516 /* Build configuration list for PBXNativeTarget "05.Cinemas-ClassAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33F53AC1AD307A000904516 /* Debug */,
+				F33F53AD1AD307A000904516 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F33F53AE1AD307A000904516 /* Build configuration list for PBXNativeTarget "05.Cinemas-ClassAssignmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33F53AF1AD307A000904516 /* Debug */,
+				F33F53B01AD307A000904516 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F33F53801AD307A000904516 /* Project object */;
+}
