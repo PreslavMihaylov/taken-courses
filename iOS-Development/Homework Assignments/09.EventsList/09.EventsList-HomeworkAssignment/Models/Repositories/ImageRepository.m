@@ -8,6 +8,12 @@
 
 #import "ImageRepository.h"
 
+@interface ImageRepository()
+
+@property (nonatomic) NSMutableArray *images;
+
+@end
+
 @implementation ImageRepository
 
 static ImageRepository *sharedInst = nil;
@@ -23,6 +29,18 @@ static ImageRepository *sharedInst = nil;
     return sharedInst;
 }
 
+-(NSUInteger)numberOfImages {
+    return [self.images count];
+}
+
+-(UIImage *)chosenImage {
+    if (!_chosenImage ) {
+        return self.images[0];
+    }
+    
+    return _chosenImage;
+}
+
 - (id)init {
     if ( sharedInst != nil ) {
         [NSException raise:NSInternalInconsistencyException
@@ -35,10 +53,13 @@ static ImageRepository *sharedInst = nil;
         sharedInst = self;
         
         self.images = [[NSMutableArray alloc] init];
-        self.chosenImage = [UIImage imageNamed:@"image1.jpg"];
         [self instantiateImages];
     }
     return sharedInst;
+}
+
+-(UIImage *)getImageAtIndex:(NSUInteger)index {
+    return (UIImage *)self.images[index];
 }
 
 -(void) instantiateImages {

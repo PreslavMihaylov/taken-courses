@@ -11,9 +11,10 @@
 
 @interface ImageRepository : NSObject
 
-@property (nonatomic) NSMutableArray *images;
 @property (nonatomic) UIImage *chosenImage;
+@property (nonatomic, readonly) NSUInteger numberOfImages;
 
+-(UIImage *)getImageAtIndex:(NSUInteger)index;
 + (ImageRepository *)sharedInstance;
 
 @end

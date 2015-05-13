@@ -29,6 +29,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self.navigationController setToolbarHidden:NO];
+    
     [self categoriseEvents];
     [self.collectionView reloadData];
 }
@@ -77,7 +79,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [dateFormatter setDateFormat:@"EEE MMM d"];
     
-    header.titleLabel.text = [dateFormatter stringFromDate:date];
+    [header setHeaderTitle:[dateFormatter stringFromDate:date]];
+    
     return header;
 }
 
@@ -89,16 +92,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     Event *event = (Event *)[currentEventsSection objectAtIndex:indexPath.row];
     
-    cell.titleLabel.text = event.title;
-    cell.imageView.image = event.image;
-    cell.relatedPersonLabel.text = event.relatedPerson;
-    cell.descriptionLabel.text = event.info;
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"h:mm a"];
-    NSString *dateString = [dateFormatter stringFromDate:event.date];
-    
-    cell.hoursLabel.text = dateString;
+    [cell setEvent:event];
     
     return cell;
 }
@@ -136,8 +130,8 @@ static NSString * const reuseIdentifier = @"Cell";
 -(void) categoriseEvents {
     self.categorisedEvents = [NSMutableDictionary dictionary];
     
-    for (int index = 0; index < [[EventsRepository sharedInstance].events count]; index++) {
-        Event *event = [EventsRepository sharedInstance].events[index];
+    for (int index = 0; index < [[EventsRepository sharedInstance] numberOfEvents]; index++) {
+        Event *event = [[EventsRepository sharedInstance] getEventAtIndex:index];
 
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"MM.dd.yyyy"];

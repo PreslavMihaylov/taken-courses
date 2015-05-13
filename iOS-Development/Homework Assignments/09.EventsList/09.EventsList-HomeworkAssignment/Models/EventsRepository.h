@@ -11,8 +11,14 @@
 
 @interface EventsRepository : NSObject
 
-@property (nonatomic) NSMutableArray *events;
 @property (nonatomic) Event* chosenEvent;
+@property (nonatomic, readonly) NSUInteger numberOfEvents;
+
+-(void) addEvent:(Event *)event;
+
+-(void) removeEventAtIndex:(NSUInteger)index;
+
+-(Event *) getEventAtIndex:(NSUInteger)index;
 
 + (EventsRepository *)sharedInstance;
 

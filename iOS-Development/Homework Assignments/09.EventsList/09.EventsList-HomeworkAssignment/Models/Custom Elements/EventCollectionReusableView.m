@@ -8,6 +8,16 @@
 
 #import "EventCollectionReusableView.h"
 
+@interface EventCollectionReusableView()
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@end
+
 @implementation EventCollectionReusableView
+
+-(void)setHeaderTitle:(NSString *)title {
+    self.titleLabel.text = title;
+}
 
 @end

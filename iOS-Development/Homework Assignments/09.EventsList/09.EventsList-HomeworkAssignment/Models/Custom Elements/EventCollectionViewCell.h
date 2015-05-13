@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Event.h"
 
 @interface EventCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
-@property (weak, nonatomic) IBOutlet UILabel *relatedPersonLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+
+-(void)setEvent:(Event *)event;
 
 @end

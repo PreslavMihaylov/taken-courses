@@ -11,6 +11,9 @@
 #import "Event.h"
 
 @interface EventsRepository()
+
+@property (nonatomic) NSMutableArray *events;
+
 #define RANDOM_INFO @"Lorem ipsum dolor sit amet, sanctus saperet alienum vix ei, eos ex alii molestiae. Mei at idque minimum dissentiet, vix diam elit et, diam nullam legendos duo id. Tractatos adversarium ne eos, duo te stet equidem accommodare, vel option efficiantur in. Usu at facer aliquid efficiendi. Nonumes convenire persecuti ut pri, has alia iisque ex, ne solum volumus quo."
 
 @end
@@ -45,6 +48,22 @@ static EventsRepository *sharedInst = nil;
         [self instantiateData];
     }
     return sharedInst;
+}
+
+-(NSUInteger)numberOfEvents {
+    return [self.events count];
+}
+
+-(void) addEvent:(Event *)event {
+    [self.events addObject:event];
+}
+
+-(void) removeEventAtIndex:(NSUInteger)index {
+    [self.events removeObjectAtIndex:index];
+}
+
+-(Event *) getEventAtIndex:(NSUInteger)index {
+    return [self.events objectAtIndex:index];
 }
 
 -(void) instantiateData {

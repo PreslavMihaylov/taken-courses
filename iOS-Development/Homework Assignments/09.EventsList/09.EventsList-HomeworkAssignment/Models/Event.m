@@ -10,12 +10,4 @@
 
 @implementation Event
 
-- (NSComparisonResult)compare:(Event *)secondObject {
-    return [self.date compare:secondObject.date];
-}
-
-- (NSString *)description {
-    return self.date;
-}
-
 @end

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EventCollectionReusableView : UICollectionReusableView
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+-(void)setHeaderTitle:(NSString *)title;
 
 @end

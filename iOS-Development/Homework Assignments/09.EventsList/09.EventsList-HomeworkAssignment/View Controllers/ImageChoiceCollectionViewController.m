@@ -37,14 +37,14 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [[ImageRepository sharedInstance].images count];
+    return [[ImageRepository sharedInstance] numberOfImages];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     EventImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:IMAGE_CELL_IDENTIFIER forIndexPath:indexPath];
     
-    UIImage *chosenImage = (UIImage *)[[ImageRepository sharedInstance].images objectAtIndex:indexPath.row];
-    cell.imageView.image = chosenImage;
+    UIImage *chosenImage = [[ImageRepository sharedInstance] getImageAtIndex:indexPath.row];
+    [cell setImage:chosenImage];
     
     return cell;
 }
@@ -55,8 +55,12 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [ImageRepository sharedInstance].chosenImage = [[ImageRepository sharedInstance].images objectAtIndex:indexPath.row];
-    [self.navigationController popViewControllerAnimated:YES];
+    [ImageRepository sharedInstance].chosenImage = [[ImageRepository sharedInstance] getImageAtIndex:indexPath.row];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)backButtonTouchUpInside:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

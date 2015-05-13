@@ -8,6 +8,16 @@
 
 #import "EventImageCollectionViewCell.h"
 
+@interface EventImageCollectionViewCell()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+@end
+
 @implementation EventImageCollectionViewCell
+
+-(void)setImage:(UIImage *)image {
+    self.imageView.image = image;
+}
 
 @end

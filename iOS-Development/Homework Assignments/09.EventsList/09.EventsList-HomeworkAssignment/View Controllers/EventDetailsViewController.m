@@ -25,7 +25,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    [self.navigationController setToolbarHidden:YES];
     
     Event *event = [EventsRepository sharedInstance].chosenEvent;
     
@@ -45,7 +45,9 @@
     [super viewDidLoad];
     
     // self.view.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view removeConstraints:self.view.constraints];
     [self setAutoLayoutConstraints];
+    [self.scrollView setContentSize:CGSizeMake(200, 1000)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,6 +62,7 @@
     UIImageView *imageView = self.imageView;
     UITextView *info = self.descriptionTextView;
     UIView *innerView = self.innerView;
+    info.translatesAutoresizingMaskIntoConstraints = NO;
     
     NSDictionary *views = NSDictionaryOfVariableBindings(title, relatedPerson, date, imageView, info, innerView);
     
@@ -77,37 +80,13 @@
                                views:views]];
     
     NSLayoutConstraint *innerViewCenterX = [NSLayoutConstraint constraintWithItem:innerView
-                                                                             attribute:NSLayoutAttributeCenterX
-                                                                             relatedBy:NSLayoutRelationEqual
-                                                                                toItem:innerView.superview
-                                                                             attribute:NSLayoutAttributeCenterX
-                                                                            multiplier:1.f constant:0.f];
-    
-//    NSLayoutConstraint *innerViewCenterY = [NSLayoutConstraint constraintWithItem:innerView
-//                                                                        attribute:NSLayoutAttributeCenterY
-//                                                                        relatedBy:NSLayoutRelationEqual
-//                                                                           toItem:innerView.superview
-//                                                                        attribute:NSLayoutAttributeCenterY
-//                                                                       multiplier:1.f constant:0];
-//    
-//    NSLayoutConstraint *innerViewVerticalSpacingBottom = [NSLayoutConstraint constraintWithItem:innerView
-//                                                                        attribute:NSLayoutAttributeBottom
-//                                                                        relatedBy:NSLayoutRelationEqual
-//                                                                           toItem:info
-//                                                                        attribute:NSLayoutAttributeBottom
-//                                                                       multiplier:1.f constant:20];
-//    
-//    NSLayoutConstraint *innerViewVerticalSpacingTop = [NSLayoutConstraint constraintWithItem:innerView
-//                                                                                   attribute:NSLayoutAttributeTop
-//                                                                                    relatedBy:NSLayoutRelationEqual
-//                                                                                     toItem:title
-//                                                                                  attribute:NSLayoutAttributeTop
-//                                                                                 multiplier:1.f constant:20];
+                                                                        attribute:NSLayoutAttributeCenterX
+                                                                        relatedBy:NSLayoutRelationEqual
+                                                                           toItem:innerView.superview
+                                                                        attribute:NSLayoutAttributeCenterX
+                                                                       multiplier:1.f constant:0.f];
     
     [self.view addConstraint:innerViewCenterX];
-    //[self.view addConstraint:innerViewCenterY];
-    //[self.view addConstraint:innerViewVerticalSpacingBottom];
-    //[self.view addConstraint:innerViewVerticalSpacingTop];
     
     // Title Constraints
     [self.view addConstraints:[NSLayoutConstraint
@@ -117,19 +96,10 @@
                                views:views]];
     
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"|-(>=20)-[title]-(>=20)-|"
+                               constraintsWithVisualFormat:@"|-[title]-|"
                                options:NSLayoutFormatDirectionLeadingToTrailing
                                metrics:nil
                                views:views]];
-    
-    NSLayoutConstraint *titleCentered = [NSLayoutConstraint constraintWithItem:title
-                                                                     attribute:NSLayoutAttributeCenterX
-                                                                     relatedBy:NSLayoutRelationEqual
-                                                                        toItem:title.superview
-                                                                     attribute:NSLayoutAttributeCenterX
-                                                                    multiplier:1.f constant:0.f];
-    
-    [self.view addConstraint:titleCentered];
     
     // Related Person Constraints
     [self.view addConstraints:[NSLayoutConstraint
@@ -139,30 +109,15 @@
                                views:views]];
     
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"|-(>=20)-[relatedPerson]-(>=20)-|"
+                               constraintsWithVisualFormat:@"|-[relatedPerson]-|"
                                options:NSLayoutFormatDirectionLeadingToTrailing
                                metrics:nil
                                views:views]];
-    
-    NSLayoutConstraint *relatedPersonCentered = [NSLayoutConstraint constraintWithItem:relatedPerson
-                                                                     attribute:NSLayoutAttributeCenterX
-                                                                     relatedBy:NSLayoutRelationEqual
-                                                                        toItem:relatedPerson.superview
-                                                                     attribute:NSLayoutAttributeCenterX
-                                                                    multiplier:1.f constant:0.f];
-    
-    [self.view addConstraint:relatedPersonCentered];
     
     // Image View Constraints
     [self.view addConstraints:[NSLayoutConstraint
                                constraintsWithVisualFormat:@"V:[relatedPerson]-20-[imageView]"
                                options:0
-                               metrics:nil
-                               views:views]];
-    
-    [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"|-(>=20)-[imageView]-(>=20)-|"
-                               options:NSLayoutFormatDirectionLeadingToTrailing
                                metrics:nil
                                views:views]];
     
@@ -202,31 +157,15 @@
                                views:views]];
     
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"|-(>=20)-[date]-(>=20)-|"
+                               constraintsWithVisualFormat:@"|-[date]-|"
                                options:NSLayoutFormatDirectionLeadingToTrailing
                                metrics:nil
                                views:views]];
-    
-    NSLayoutConstraint *dateCentered = [NSLayoutConstraint constraintWithItem:date
-                                                                             attribute:NSLayoutAttributeCenterX
-                                                                             relatedBy:NSLayoutRelationEqual
-                                                                                toItem:date.superview
-                                                                             attribute:NSLayoutAttributeCenterX
-                                                                            multiplier:1.f constant:0.f];
-    
-    [self.view addConstraint:dateCentered];
     
     // Info Text View Constraints
-    
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"V:[date]-20-[info]"
+                               constraintsWithVisualFormat:@"V:[date]-20-[info]-20-|"
                                options:0
-                               metrics:nil
-                               views:views]];
-    
-    [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"|-(>=20)-[info]-(>=20)-|"
-                               options:NSLayoutFormatDirectionLeadingToTrailing
                                metrics:nil
                                views:views]];
     
@@ -245,17 +184,17 @@
                                                                     multiplier:2.0/3.0
                                                                       constant:0.0f];
     
-    NSLayoutConstraint *infoVerticalSpacingBottom =[NSLayoutConstraint constraintWithItem:info
-                                                                      attribute:NSLayoutAttributeBottom
-                                                                      relatedBy:NSLayoutRelationEqual
-                                                                         toItem:innerView
-                                                                      attribute:NSLayoutAttributeBottom
-                                                                     multiplier:1.0
-                                                                       constant:-8.0f];
+    NSLayoutConstraint *infoHeight =[NSLayoutConstraint constraintWithItem:info
+                                                                attribute:NSLayoutAttributeHeight
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:info.superview
+                                                                attribute:NSLayoutAttributeWidth
+                                                               multiplier:1.0/3.0
+                                                                 constant:0.0f];
     
+    [self.view addConstraint:infoHeight];
     [self.view addConstraint:infoCentered];
     [self.view addConstraint:infoWidth];
-    [self.view addConstraint:infoVerticalSpacingBottom];
 }
 
 @end
