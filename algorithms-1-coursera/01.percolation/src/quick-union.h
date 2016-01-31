@@ -4,7 +4,7 @@
 class QUnion {
 	public:
 		QUnion(int elementsCnt);
-		void union(int first, int second);
+		void createUnion(int first, int second);
 		bool isConnected(int first, int second);
 	private:
 		int * elements;
