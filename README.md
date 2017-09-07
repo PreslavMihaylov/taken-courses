@@ -1,6 +1,6 @@
-# Mentor-Academy-Courses
-
-* iOS Development - http://academy.mentormate.bg/courses/free-ios-training/
+# iOS Development by Mentor Academy
+* http://academy.mentormate.bg/courses/free-ios-training/
+* An introduction to iOS development course in Mentor Academy. It is sponsored by a local Sofia company with the purpose of training people for their iOS dev team.
 
 # Programming: Principles and Practice Using C++ - Bjarne Stroustrup
 * https://goo.gl/2qA3Zi
