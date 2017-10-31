@@ -2,3 +2,7 @@ bin/
 obj/
 objs/
 *.exe
+*.a
+*.so
+*.o
+tests.log
